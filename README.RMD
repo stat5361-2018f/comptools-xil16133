@@ -1,0 +1,58 @@
+
+---
+title: "Statistical Computing"
+subtitle: "Homework 1: Compile the book Advanced R Programming"
+author: Xiaokang Liu
+date: "`r format(Sys.time(), '%d %B %Y')`"
+header-includes:
+    - \usepackage{booktabs}
+    - \usepackage{bm}
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: no
+    number_sections: yes
+    toc: no
+  fontsize: 11pt
+  classoption: letter
+  documentclass: article
+
+---
+
+
+
+# Steps and errors
+
+* Update R and Rstudio to the latest version.
+
+* Follow the steps in book 'Happy Git and Github for the useR' to learn the 
+operations needed when use Rstudio to work with git.
+
+* Use git to clone all the related files of the book into the local directory.
+
+* Find the file ends in .rproj, double click it to open the R project in Rstudio. 
+
+* From the tool bar find and click 'build all' or find the icon 'Build Book' at
+the upper right pane and click it, then the Rstudio begins to compile the book.
+
+* The first error: "Error in dev.control(displaylist = if (record) "enable" else
+"inhibit") : dev.control() called without an open graphics device Calls: local 
+... call_block -> block_exec -> chunk_device -> dev.control." It can be solved 
+by downloading and installing XQuartz on Mac. 
+
+* Then it is necessary to download a variety of R-packages, such as `zeallot`, 
+`dbplyr` and `lineprof`. Some can be installed from R-CRAN and some others need
+to be installed from Github by command such as
+
+```{r, eval=FALSE}
+devtools::install_github("r-lib/lobstr")
+```
+
+* Next, the problem that might appear is one related to a file called 
+`sidebar.lua` in the latex folder. And this problem can be solved by downloading
+and installing `pandoc`.
+
+* The final problem is that the font `inconsolata` cannot be found, and it can 
+be solved easily by downloading that font from <en.wikipedia.org/wiki/Inconsolata>
+and put it in the font library in local. 
+
