@@ -19,30 +19,31 @@ output:
 
 ---
 
-
-
 # Steps and errors
 
 * Update R and Rstudio to the latest version.
 
-* Follow the steps in book 'Happy Git and Github for the useR' to learn the 
-operations needed when use Rstudio to work with git.
+* Follow the steps in book 'Happy Git and Github for the useR' to learn the basic
+operations needed when use Rstudio to work with Github.
 
-* Use git to clone all the related files of the book into the local directory.
+* Use git to clone all the related files of the book 'advanced R programming' into the local directory.
 
 * Find the file ends in .rproj, double click it to open the R project in Rstudio. 
 
 * From the tool bar find and click 'build all' or find the icon 'Build Book' at
 the upper right pane and click it, then the Rstudio begins to compile the book.
 
-* The first error: "Error in dev.control(displaylist = if (record) "enable" else
+* The first error is "Error in dev.control(displaylist = if (record) "enable" else
 "inhibit") : dev.control() called without an open graphics device Calls: local 
 ... call_block -> block_exec -> chunk_device -> dev.control." It can be solved 
-by downloading and installing XQuartz on Mac. 
+by downloading and installing XQuartz from <https://www.xquartz.org> onto Mac. 
 
 * Then it is necessary to download a variety of R-packages, such as `zeallot`, 
-`dbplyr` and `lineprof`. Some can be installed from R-CRAN and some others need
-to be installed from Github by command such as
+`dbplyr` and `lineprof`. Some can be installed from R-CRAN by command such as
+```{r, eval=FALSE}
+install.packages("splines")
+```
+and some others need to be installed from Github by command such as
 
 ```{r, eval=FALSE}
 devtools::install_github("r-lib/lobstr")
@@ -50,9 +51,7 @@ devtools::install_github("r-lib/lobstr")
 
 * Next, the problem that might appear is one related to a file called 
 `sidebar.lua` in the latex folder. And this problem can be solved by downloading
-and installing `pandoc`.
+and installing `pandoc` from <https://pandoc.org/installing.html>.
 
-* The final problem is that the font `inconsolata` cannot be found, and it can 
-be solved easily by downloading that font from <en.wikipedia.org/wiki/Inconsolata>
-and put it in the font library in local. 
+* The final problem is that the font `inconsolata` cannot be found, and it can be solved easily by downloading that font from <https://en.wikipedia.org/wiki/Inconsolata> and put it in the font library in local. 
 
